@@ -1,5 +1,5 @@
 [package]
-name = "serde_ext"
+name = "serde_ext_core"
 version = "0.1.0"
 edition = "2024"
 description = "Shared configuration and byte encoding helpers for serde extension crates"

@@ -8,7 +8,7 @@ deserialization behavior.
 - default array encoding for byte fields
 - hexadecimal encoding with optional `0x` prefix
 - base64 and base64 URL-safe encoding
-- shared `Config` and `BytesFormat` re-exported from `serde_ext`
+- shared `Config` and `BytesFormat` re-exported from `serde_ext_core`
 
 ## Installation
 

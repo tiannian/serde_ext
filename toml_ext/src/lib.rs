@@ -11,7 +11,7 @@ pub use from::*;
 mod tests {
     use super::*;
     use serde::{Deserialize, Serialize};
-    use serde_ext::de::Deserializer;
+    use serde_ext_core::de::Deserializer;
 
     #[test]
     fn to_string_hex_and_base64() {

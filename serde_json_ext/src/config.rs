@@ -1,1 +1,1 @@
-pub use serde_ext::{BytesFormat, Config};
+pub use serde_ext_core::{BytesFormat, Config};

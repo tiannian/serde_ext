@@ -3,7 +3,7 @@ resolver = "3"
 members = ["serde_ext", "serde_json_ext", "toml_ext"]
 
 [workspace.dependencies]
-serde_ext = { version = "0.1.0", path = "serde_ext" }
+serde_ext_core = { version = "0.1.0", path = "serde_ext" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 serde_bytes = "0.11"

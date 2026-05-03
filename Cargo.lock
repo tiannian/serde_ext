@@ -107,7 +107,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "serde_ext"
+name = "serde_ext_core"
 version = "0.1.0"
 dependencies = [
  "base64",
@@ -134,7 +134,7 @@ version = "0.1.10"
 dependencies = [
  "serde",
  "serde_bytes",
- "serde_ext",
+ "serde_ext_core",
  "serde_json",
 ]
 
@@ -190,7 +190,7 @@ dependencies = [
  "hex",
  "serde",
  "serde_bytes",
- "serde_ext",
+ "serde_ext_core",
  "toml",
 ]
 

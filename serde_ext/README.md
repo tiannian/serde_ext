@@ -1,4 +1,4 @@
-# serde_ext
+# serde_ext_core
 
 Shared configuration and low-level serializer and deserializer support for the
 workspace crates.
@@ -13,7 +13,7 @@ workspace crates.
 
 ```toml
 [dependencies]
-serde_ext = { version = "0.1.0" }
+serde_ext_core = { version = "0.1.0" }
 serde = { version = "1", features = ["derive"] }
 serde_bytes = "0.11"
 ```
@@ -21,7 +21,7 @@ serde_bytes = "0.11"
 ## Usage
 
 ```rust
-use serde_ext::{BytesFormat, Config};
+use serde_ext_core::{BytesFormat, Config};
 
 let config = Config::default()
     .set_bytes_hex()

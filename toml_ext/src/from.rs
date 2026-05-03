@@ -1,6 +1,6 @@
 use crate::Config;
 use serde::de::DeserializeOwned;
-use serde_ext::de::Deserializer;
+use serde_ext_core::de::Deserializer;
 use std::io::Read;
 
 /// Deserialize a value from TOML text.

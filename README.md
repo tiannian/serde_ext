@@ -1,11 +1,11 @@
-# serde_ext workspace
+# serde_ext_core workspace
 
 This workspace contains serde helper crates for configurable byte encoding and
 format-specific serialization support.
 
 ## Packages
 
-- [`serde_ext`](serde_ext/README.md): shared configuration and low-level
+- [`serde_ext_core`](serde_ext/README.md): shared configuration and low-level
   serializer and deserializer support.
 - [`serde_json_ext`](serde_json_ext/README.md): JSON helpers built on top of
   `serde_json`.

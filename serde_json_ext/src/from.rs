@@ -2,7 +2,7 @@ use serde::{Deserialize, de::DeserializeOwned};
 use serde_json::{Result, de::Read};
 
 use crate::Config;
-use serde_ext::de::Deserializer;
+use serde_ext_core::de::Deserializer;
 
 fn from_trait<'de, R, T>(read: R, config: &'de Config) -> Result<T>
 where

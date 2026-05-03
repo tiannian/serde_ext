@@ -7,7 +7,7 @@ license = "MIT"
 repository = "https://github.com/tiannian/serde_ext"
 
 [dependencies]
-serde_ext = { workspace = true }
+serde_ext_core = { workspace = true }
 base64 = { workspace = true }
 hex = { workspace = true }
 serde = { workspace = true }
