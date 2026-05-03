@@ -1,0 +1,10 @@
+[package]
+name = "serde_ext"
+version = "0.1.0"
+edition = "2024"
+description = "Shared configuration and byte encoding helpers for serde extension crates"
+license = "MIT"
+
+[dependencies]
+base64 = "0.22"
+hex = "0.4"

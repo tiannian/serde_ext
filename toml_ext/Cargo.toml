@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+serde_ext = { path = "../serde_ext" }
 base64 = "0.22"
 hex = "0.4"
 serde = { version = "1.0", features = ["derive"] }

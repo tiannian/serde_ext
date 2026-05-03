@@ -4,13 +4,7 @@ use crate::Config;
 
 /// Serializes bytes as a hexadecimal string "0x1234..." or "1234..."
 pub(crate) fn ser_bytes_hex(config: &Config, value: &[u8]) -> String {
-    let hex_str = hex::encode(value);
-
-    if config.hex_prefix {
-        format!("0x{}", hex_str)
-    } else {
-        hex_str
-    }
+    serde_ext::encode_hex(config, value)
 }
 
 /// Serializes bytes as a Base64 string
