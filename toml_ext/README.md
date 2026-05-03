@@ -1,20 +1,20 @@
-# serde_json_ext
+# toml_ext
 
-JSON helpers built on top of `serde_json` with configurable byte serialization
-formats.
+TOML helpers built on top of `toml` with configurable byte serialization and
+deserialization behavior.
 
 ## Overview
 
 - default array encoding for byte fields
 - hexadecimal encoding with optional `0x` prefix
 - base64 and base64 URL-safe encoding
-- matching serialization and deserialization helpers
+- shared `Config` and `BytesFormat` re-exported from `serde_ext`
 
 ## Installation
 
 ```toml
 [dependencies]
-serde_json_ext = "0.1.9"
+toml_ext = "0.1.0"
 serde = { version = "1", features = ["derive"] }
 serde_bytes = "0.11"
 ```
@@ -23,7 +23,7 @@ serde_bytes = "0.11"
 
 ```rust
 use serde::Serialize;
-use serde_json_ext::{to_string, Config};
+use toml_ext::{to_string, Config};
 
 #[derive(Serialize)]
 struct Example {
@@ -34,21 +34,15 @@ struct Example {
 let value = Example { data: vec![1, 2, 3, 255] };
 let config = Config::default().set_bytes_hex().enable_hex_prefix();
 
-let json = to_string(&value, &config).unwrap();
-assert_eq!(json, r#"{"data":"0x010203ff"}"#);
+let toml = to_string(&value, &config).unwrap();
+assert!(toml.contains(r#"data = "0x010203ff""#) || toml.contains(r#"data = "010203ff""#));
 ```
 
 ## API
 
 - `to_string`
 - `to_string_pretty`
-- `to_vec`
-- `to_vec_pretty`
-- `to_writer`
-- `to_writer_pretty`
-- `to_value`
 - `from_str`
-- `from_slice`
 - `from_reader`
 - `from_value`
 - `Config`
@@ -59,8 +53,6 @@ assert_eq!(json, r#"{"data":"0x010203ff"}"#);
 - Use `#[serde(with = "serde_bytes")]` on byte fields that should use the
   custom encoding rules.
 - Serialization and deserialization must use the same `Config` values.
-- Hex strings are accepted with or without the `0x` prefix during
-  deserialization.
 
 ## License
 
