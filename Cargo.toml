@@ -1,0 +1,3 @@
+[workspace]
+resolver = "3"
+members = ["serde_json_ext", "toml_ext"]

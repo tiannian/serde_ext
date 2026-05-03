@@ -1,0 +1,16 @@
+[package]
+name = "serde_json_ext"
+version = "0.1.9"
+edition = "2024"
+description = "A serde_json extension that provides configurable bytes serialization formats (hex, base64, default array)"
+license = "MIT"
+repository = "https://github.com/tiannian/serde_json_ext"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.22"
+hex = "0.4"
+
+[dev-dependencies]
+serde_bytes = "0.11"

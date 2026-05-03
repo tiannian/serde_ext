@@ -1,0 +1,30 @@
+use serde::ser::SerializeTupleStruct;
+
+use crate::{Config, ser::value::WrapValue};
+
+pub struct WrapSerializeTupleStruct<'a, Tup> {
+    pub inner: Tup,
+    pub config: &'a Config,
+}
+
+impl<'a, Tup> SerializeTupleStruct for WrapSerializeTupleStruct<'a, Tup>
+where
+    Tup: serde::ser::SerializeTupleStruct,
+{
+    type Ok = Tup::Ok;
+    type Error = Tup::Error;
+
+    fn serialize_field<T: ?Sized + serde::ser::Serialize>(
+        &mut self,
+        value: &T,
+    ) -> Result<(), Self::Error> {
+        self.inner.serialize_field(&WrapValue {
+            value,
+            config: self.config,
+        })
+    }
+
+    fn end(self) -> Result<Self::Ok, Self::Error> {
+        self.inner.end()
+    }
+}
