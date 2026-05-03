@@ -4,7 +4,7 @@ use serde_json::ser::{CompactFormatter, PrettyFormatter};
 
 use crate::Config;
 // use crate::formatter::{CompactFormatter, PrettyFormatter};
-use crate::ser::serializer::Serializer;
+use serde_ext::ser::serializer::Serializer;
 use std::io::Write;
 
 /// Serializes a value to a JSON string with the given configuration.

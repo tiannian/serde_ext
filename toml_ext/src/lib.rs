@@ -1,18 +1,17 @@
 mod config;
 pub use config::*;
 
-pub(crate) mod de;
-pub use de::Deserializer;
-pub use de::from::*;
+mod to;
+pub use to::*;
 
-pub(crate) mod ser;
-pub use ser::Serializer;
-pub use ser::to::*;
+mod from;
+pub use from::*;
 
 #[cfg(test)]
 mod tests {
     use super::*;
     use serde::{Deserialize, Serialize};
+    use serde_ext::de::Deserializer;
 
     #[test]
     fn to_string_hex_and_base64() {

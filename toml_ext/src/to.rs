@@ -1,4 +1,5 @@
-use crate::{Config, ser::Serializer};
+use crate::Config;
+use serde_ext::ser::serializer::Serializer;
 
 /// Serialize a value into TOML text.
 pub fn to_string<T>(value: &T, config: &Config) -> Result<String, toml::ser::Error>

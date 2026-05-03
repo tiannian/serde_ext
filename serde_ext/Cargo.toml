@@ -8,3 +8,4 @@ license = "MIT"
 [dependencies]
 base64 = "0.22"
 hex = "0.4"
+serde = { version = "1.0" }

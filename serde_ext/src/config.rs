@@ -81,27 +81,3 @@ impl Config {
         self
     }
 }
-
-/// Encodes bytes as hex, applying the configured prefix if requested.
-pub fn encode_hex(config: &Config, value: &[u8]) -> String {
-    let encoded = hex::encode(value);
-    if config.hex_prefix {
-        format!("0x{encoded}")
-    } else {
-        encoded
-    }
-}
-
-/// Encodes bytes as standard base64.
-pub fn encode_base64(value: &[u8]) -> String {
-    use base64::{Engine as _, engine::general_purpose};
-
-    general_purpose::STANDARD.encode(value)
-}
-
-/// Encodes bytes as URL-safe base64.
-pub fn encode_base64_url_safe(value: &[u8]) -> String {
-    use base64::{Engine as _, engine::general_purpose};
-
-    general_purpose::URL_SAFE.encode(value)
-}
