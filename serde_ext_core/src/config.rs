@@ -11,7 +11,7 @@ pub enum BytesFormat {
     Base64UrlSafe,
 }
 
-/// Configuration shared by `serde_json_ext` and `toml_ext`.
+/// Configuration shared by `serde_json_ext` and `serde_toml_ext`.
 #[derive(Debug, Clone)]
 pub struct Config {
     /// Bytes encoding format.

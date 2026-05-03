@@ -5,11 +5,11 @@ format-specific serialization support.
 
 ## Packages
 
-- [`serde_ext_core`](serde_ext/README.md): shared configuration and low-level
+- [`serde_ext_core`](serde_ext_core/README.md): shared configuration and low-level
   serializer and deserializer support.
 - [`serde_json_ext`](serde_json_ext/README.md): JSON helpers built on top of
   `serde_json`.
-- [`toml_ext`](toml_ext/README.md): TOML helpers built on top of `toml`.
+- [`serde_toml_ext`](serde_toml_ext/README.md): TOML helpers built on top of `toml`.
 
 ## Common behavior
 

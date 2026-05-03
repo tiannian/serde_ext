@@ -1,5 +1,5 @@
 use serde::Serialize;
-use toml_ext::{Config, to_string};
+use serde_toml_ext::{Config, to_string};
 
 #[derive(Serialize)]
 struct Packet {

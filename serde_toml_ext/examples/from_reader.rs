@@ -1,6 +1,6 @@
 use serde::Deserialize;
 use std::io::Cursor;
-use toml_ext::{Config, from_reader};
+use serde_toml_ext::{Config, from_reader};
 
 #[derive(Debug, Deserialize)]
 struct Packet {

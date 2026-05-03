@@ -148,6 +148,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_toml_ext"
+version = "0.1.1"
+dependencies = [
+ "base64",
+ "hex",
+ "serde",
+ "serde_bytes",
+ "serde_ext_core",
+ "toml",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.117"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -180,18 +192,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3165f65f62e28e0115a00b2ebdd37eb6f3b641855f9d636d3cd4103767159ad7"
 dependencies = [
  "serde_core",
-]
-
-[[package]]
-name = "toml_ext"
-version = "0.1.1"
-dependencies = [
- "base64",
- "hex",
- "serde",
- "serde_bytes",
- "serde_ext_core",
- "toml",
 ]
 
 [[package]]

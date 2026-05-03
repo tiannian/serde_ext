@@ -1,4 +1,4 @@
-# toml_ext
+# serde_toml_ext
 
 TOML helpers built on top of `toml` with configurable byte serialization and
 deserialization behavior.
@@ -14,7 +14,7 @@ deserialization behavior.
 
 ```toml
 [dependencies]
-toml_ext = "0.1.0"
+serde_toml_ext = "0.1.1"
 serde = { version = "1", features = ["derive"] }
 serde_bytes = "0.11"
 ```
@@ -23,7 +23,7 @@ serde_bytes = "0.11"
 
 ```rust
 use serde::Serialize;
-use toml_ext::{to_string, Config};
+use serde_toml_ext::{to_string, Config};
 
 #[derive(Serialize)]
 struct Example {

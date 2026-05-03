@@ -42,6 +42,6 @@ assert!(config.hex_prefix);
 
 - This crate is usually consumed indirectly through
   [`serde_json_ext`](../serde_json_ext/README.md) or
-  [`toml_ext`](../toml_ext/README.md).
+  [`serde_toml_ext`](../serde_toml_ext/README.md).
 - Serialization and deserialization helpers in the sibling crates use the same
   `Config` values.
