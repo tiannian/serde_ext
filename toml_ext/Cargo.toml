@@ -1,6 +1,6 @@
 [package]
 name = "toml_ext"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "A toml extension that provides configurable bytes serialization formats (hex, base64, default array)"
 license = "MIT"

@@ -1,6 +1,6 @@
 [package]
 name = "serde_json_ext"
-version = "0.1.9"
+version = "0.1.10"
 edition = "2024"
 description = "A serde_json extension that provides configurable bytes serialization formats (hex, base64, default array)"
 license = "MIT"
