@@ -291,10 +291,8 @@ where
     where
         V: Visitor<'de>,
     {
-        self.inner.deserialize_identifier(WrapVisitor {
-            visitor,
-            config: self.config,
-        })
+        // Identifiers are map keys / field names, not byte payloads.
+        self.inner.deserialize_identifier(visitor)
     }
 
     fn deserialize_ignored_any<V>(self, visitor: V) -> Result<V::Value, Self::Error>
@@ -316,13 +314,7 @@ where
     where
         V: Visitor<'de>,
     {
-        self.inner.deserialize_enum(
-            name,
-            variants,
-            WrapVisitor {
-                visitor,
-                config: self.config,
-            },
-        )
+        // Enum variant names should not be treated as encoded byte payloads.
+        self.inner.deserialize_enum(name, variants, visitor)
     }
 }
