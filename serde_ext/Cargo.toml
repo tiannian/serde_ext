@@ -4,8 +4,9 @@ version = "0.1.0"
 edition = "2024"
 description = "Shared configuration and byte encoding helpers for serde extension crates"
 license = "MIT"
+repository = "https://github.com/tiannian/serde_ext"
 
 [dependencies]
-base64 = "0.22"
-hex = "0.4"
-serde = { version = "1.0" }
+base64 = { workspace = true }
+hex = { workspace = true }
+serde = { workspace = true }

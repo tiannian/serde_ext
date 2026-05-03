@@ -2,13 +2,16 @@
 name = "toml_ext"
 version = "0.1.0"
 edition = "2024"
+description = "A toml extension that provides configurable bytes serialization formats (hex, base64, default array)"
+license = "MIT"
+repository = "https://github.com/tiannian/serde_ext"
 
 [dependencies]
-serde_ext = { path = "../serde_ext" }
-base64 = "0.22"
-hex = "0.4"
-serde = { version = "1.0", features = ["derive"] }
-toml = "1.1.2"
+serde_ext = { workspace = true }
+base64 = { workspace = true }
+hex = { workspace = true }
+serde = { workspace = true }
+toml = { workspace = true }
 
 [dev-dependencies]
-serde_bytes = "0.11"
+serde_bytes = { workspace = true }
